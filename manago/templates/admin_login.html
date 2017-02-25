@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manago Admin</title>
+                 <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+                 <link href="{% static 'css/admin_login.css' %}" rel="stylesheet">
+       
+                    
+                </head>
+                <body class="body">
+                <center>
+
+
+<div class="cont1">
+<p>Enter Details to Log In</p>
+<form method="POST" action="."> 
+Username: <br>
+<input type="text" name="username" size="40"/><br> 
+Password: <br>
+<input type="password" name="password" size="40"/><br> 
+<input id="button" type="submit" name="submit" value="Check Details" /> 
+
+</div>
+</center>
+</body>
+</html>

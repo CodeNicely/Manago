@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manago Home</title>
+                <link href="{% static 'css/home.css' %}" rel="stylesheet">
+                 <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+                </head>
+                <body class="body">
+<div class="cont1">
+</div>
+<div class="cont2">
+    <nav class="navbar navbar-default" role="navigation">
+    <button>Home</button>
+    <button onclick="window.location.replace('/client_login')">Client</button>
+    <button>Developer</button>
+    <button onclick="window.open('/admin_login')">Admin</button>
+    <button>About Us</button>
+                        </nav>
+</div>
+            </body>
+        </html>
