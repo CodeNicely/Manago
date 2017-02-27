@@ -32,7 +32,7 @@
 <legend>
 Enter Details
 </legend> 
-<form method="POST" action="." name="clientf"> 
+<form method="POST" action="/client_verify/" name="clientf"> 
 Name <br>
 <input type="text" name="name" size="40"/><br> 
 Number <br>
@@ -44,15 +44,44 @@ Project ID(or Name) <br>
 Project Deadline <br>
 <input type="text" name="pro_deadline" size="40"/><br> 
 
-<input id="button" type="submit" name="submit" value="Save Details" onclick="myFunction()" /> 
+<input id="button" type="submit" name="submit-client" value="Save Details" /> 
 </form> 
 </fieldset> 
 </div>
 
 
 
+<div id="developerform">
+    <fieldset style="width:40%">
+<legend>
+Enter Details
+</legend> 
+<form method="POST" action="/developer_verify/" name="developf"> 
+Name <br>
+<input type="text" name="dname" size="40"/><br> 
+Number <br>
+<input type="number" name="dnumber" size="40"/><br> 
+Email <br>
+<input type="text" name="demail" size="40"/><br> 
+Team ID(or Name) <br>
+<input type="text" name="dteam_id" size="40"/><br> 
 
+Role <br>
+ <select>
+  <option value="tlead" name="drole">Team Leader</option>
+  <option value="sdev" name="drole">Senior Developer</option>
+  <option value="tmemb" name="drole">Developer</option>
+</select> 
+<br>
+Project ID(or Name) <br>
+<input type="text" name="dpro_id" size="40"/><br> 
+
+<input id="button" type="submit" name="submit-developer" value="Save Details" /> 
+</form> 
+</fieldset> 
+</div>
 </center>
+
   <script src = "{% static 'js/jquery.min.js' %}"></script>
   <script src = "{% static 'js/bootstrap.min.js' %}"></script>
   <script src = "{% static 'js/admin_entries.js' %}"></script>

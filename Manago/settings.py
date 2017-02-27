@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'manago',
-    'django.contrib.webdesign',
 ]
 
 MIDDLEWARE_CLASSES = [

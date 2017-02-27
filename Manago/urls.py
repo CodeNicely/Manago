@@ -21,7 +21,6 @@ from manago.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^Manago/', home_request),
-    url(r'^client_login/$',client_lrq),
-    url(r'^admin_entries/$',admin_erq),
-    url(r'^admin_login/$',admin_lrq),
+    url(r'admin_login/',admin_login),
+    url(r'client_verify/',client_entries),
 ]
