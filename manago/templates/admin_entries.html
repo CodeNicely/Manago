@@ -11,7 +11,7 @@
                     
                 </head>
 <body class="body">
-<button onclick="window.location.replace('/Manago')" style="float: right;">Logout</button>
+<button onclick='closeMe()' style="float: right;">Logout</button>
                 <center>
 
 
@@ -81,7 +81,13 @@ Project ID(or Name) <br>
 </fieldset> 
 </div>
 </center>
-
+<script>
+function closeMe()
+{
+    window.opener = self;
+    window.close();
+}
+</script>
   <script src = "{% static 'js/jquery.min.js' %}"></script>
   <script src = "{% static 'js/bootstrap.min.js' %}"></script>
   <script src = "{% static 'js/admin_entries.js' %}"></script>

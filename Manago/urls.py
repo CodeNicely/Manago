@@ -23,4 +23,10 @@ urlpatterns = [
     url(r'^Manago/', home_request),
     url(r'admin_login/',admin_login),
     url(r'client_verify/',client_entries),
+    url(r'developer_verify/',developer_entries),
+    url(r'developer_login/',developer_login),
+    url(r'client_login/',client_login),
+    url(r'developer_panel/',developer_panel),
+    url(r'client_panel/',client_panel),
+    url(r'all_docs/',all_docs),
 ]

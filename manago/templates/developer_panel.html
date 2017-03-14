@@ -1,0 +1,150 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manago Developer Panel</title>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/reset.css' %}">
+  
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/modal.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+
+
+<script src="{% static 'js/modernizr.js' %}"></script> 
+</head>
+
+<body class="body">
+<a class="w3-btn-floating-large" id="myBtn">+</a>
+
+
+
+<!--floating button-->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+  <div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>Update</h2>
+    </div>
+    <div class="modal-body">  
+    <form action="." method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+  <textarea placeholder="Caption for this" id="caption" name="caption"></textarea>
+  <br>
+  <br> 
+  <textarea type="text" name="info" id="info" class="info" placeholder="Write Something..."> </textarea> 
+  <br>
+<br>
+<input type="file" id="fileinput" name="fileinput" multiple><br>
+<div id="selectedFiles"></div>
+<br>
+<button type="submit" value="Submit" id="submitbtn">{% trans "Save" %}</button>
+
+    </form>
+    </div>
+
+  <div class="modal-footer">
+  <h3></h3>
+</div>
+</div>
+</div>
+<!--floating button-->
+
+
+<!--Timeline code-->
+<section id="cd-timeline" class="cd-container">
+    <div class="cd-timeline-block">
+     <div class="cd-timeline-img cd-picture">
+        <img src="img/cd-icon-picture.svg" alt="Picture">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Title of section 1</h2>
+        <p>{{ lists.0 }}</p>
+        <a href="#0" class="cd-read-more">Read more</a>
+        <span class="cd-date">{{ mydate.0|date:"Y-m-d" }}</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-movie">
+        <img src="img/cd-icon-movie.svg" alt="Movie">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Title of section 2</h2>
+        <p>{{ lists.1 }}</p>
+        <a href="#0" class="cd-read-more">Read more</a>
+        <span class="cd-date">{{ mydate.1|date:"Y-m-d" }}</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-picture">
+        <img src="img/cd-icon-picture.svg" alt="Picture">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Title of section 3</h2>
+        <p>{{ lists.2 }}</p>
+        <a href="#0" class="cd-read-more">Read more</a>
+        <span class="cd-date">{{ mydate.2|date:"Y-m-d" }}</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-location">
+        <img src="img/cd-icon-location.svg" alt="Location">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Title of section 4</h2>
+        <p>{{ lists.3 }}</p>
+        <a href="#0" class="cd-read-more">Read more</a>
+        <span class="cd-date">{{ mydate.3|date:"Y-m-d" }}</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-location">
+        <img src="img/cd-icon-location.svg" alt="Location">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Title of section 5</h2>
+        <p>{{ lists.4 }}</p>
+        <a href="#0" class="cd-read-more">Read more</a>
+        <span class="cd-date">{{ mydate.4|date:"Y-m-d" }}</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-movie">
+        <img src="img/cd-icon-movie.svg" alt="Movie">
+      </div> <!-- cd-timeline-img -->
+
+      <div class="cd-timeline-content">
+        <h2>Final Section</h2>
+        <p>{{ lists.5 }}</p>
+        <span class="cd-date">{{ mydate.5|date:"Y-m-d" }}</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+  </section> 
+
+<!--Timeline code-->
+
+
+
+
+
+  <script src = "{% static 'js/jquery.min.js' %}"></script>
+  <script src = "{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/modal.js' %}"></script>
+  </body>
+</html>
